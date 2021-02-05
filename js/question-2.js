@@ -30,12 +30,8 @@ async function getAPI() {
         const listOfGames = answer.results;
         showResults.innerHTML = "";
     
-        for (let i = 0; i < listOfGames.length; i++) {
+        for (let i = 0; i < 8; i++) {
             const amountOfTags = listOfGames[i].tags;
-                        
-            if (i === 7) {
-                break;
-            }
 
             showResults.innerHTML += `<div>${listOfGames[i].name}: ${listOfGames[i].rating}, ${amountOfTags.length}</div>`;
         }
